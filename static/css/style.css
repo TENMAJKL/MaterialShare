@@ -1,0 +1,44 @@
+a {
+  text-decoration: none;
+}
+
+.form-text {
+ background-color:  #bdc3c7;
+ border-color: #bdc3c7;
+ border-style: solid;
+ border-radius: 10rem;
+ box-shadow:0px 0px 5px gray;
+}
+/*Mobil*/
+@media screen and (max-width: 480px) {
+  .search {
+    width:60%;
+    height: 5%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .search {
+    width:30%;
+    height: 5%;
+  }
+}
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  display: flex;
+}
