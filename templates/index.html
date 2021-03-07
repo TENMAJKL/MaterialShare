@@ -16,10 +16,13 @@
 </style>
 </head>
 <body>
+<div class="center">
+<img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="50%">
+</div>
 
-
-<form method="POST">
-  <input type="text" class="form-text search absolute-center">
+<form method="POST" class="container mobile-container">
+  <input type="text" class="form-text col-2 m-col-2" name="search-term">
+  <input type="image" src="{{url_for('static', filename='lupa.svg')}}" alt="Lupa" style="width:5%; height:5%">
   </form> 
 </body>
 </html>

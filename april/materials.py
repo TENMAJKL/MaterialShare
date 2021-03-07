@@ -8,9 +8,8 @@ global cursor
 cursor = database.cursor()
 
 def getBySearch(searchTerm):
-    sql = "SELECT * FROM materials WHERE description LIKE %s"
-    vals = (f"%{searchTerm}%")
-    cursor.execute(sql, vals)
+    sql = "SELECT * FROM materials WHERE content LIKE %s"
+    cursor.execute(sql,("%" + searchTerm + "%",))
     return cursor.fetchall()
 
   
