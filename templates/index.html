@@ -2,27 +2,23 @@
 <html lang="en">
 <head>
   <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/css/style.css">
+  <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
 
-  <title>Document</title>
-<style>
-  body {
-    background-image: url("{{url_for('static', filename='materialbg.svg')}}");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-</style>
+  <title>MS | Home</title>
 </head>
-<body>
-<div class="center">
-<img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="50%">
-</div>
+<body class="bg-img">
+<img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
+<div class="text-center">MaterialShare</div>
 
-<form method="POST" class="container mobile-container">
-  <input type="text" class="form-text col-2 m-col-2" name="search-term">
+<form method="POST" class="row mobile-row row-center">
+  <input type="text" class="form-text col-2 m-col-2 search" name="search-term">
   <input type="image" src="{{url_for('static', filename='lupa.svg')}}" alt="Lupa" style="width:5%; height:5%">
-  </form> 
+
+  </form>
+
+  <img src="{{url_for('static', filename='plus.svg')}}" alt="Add Material" class="add-material">
 </body>
 </html>

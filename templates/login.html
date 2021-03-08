@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>MS | Přihlášení</title>
+  <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
 </head>
-<body>
-  <form method="POST">
-    <input type="text" name="name" class="form-text">
-    <input type="password" name="Password">
+<body class="bg-img">
+  <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
+  <div class="card center col-2" style="margin-top: 5%;">
+  <div class="text-center" style="margin-bottom:2%"><h3>MaterialShare Přihlášení</h3></div>
+  <form method="POST" class="text-center">
+    <label for="name" class="column">Jméno:</label>
+    <input type="text" id="name" name="name" class="form-text">
+    <label for="password" class="column">Heslo:</label>
+    <input type="password" id="password" name="Password" class="form-text">
+    <input type="submit" name="submit" value="Přihlásit se" class="form-text row center">
   </form>
+  <div class="text-center" style="margin-top:5%">
+    Nemáš účet? <a href="https://materialshare.tenmajkl.repl.co/registre">Zaregistruj se</a>
+    |
+    Zapoměl jsi heslo? <a href="https://materialshare.tenmajkl.repl.co/forgotten-password">Poslat E-mail o změně hesla</a>
+     </div>
+     </div>
 </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Materials</title>
+    <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
+  </head>
+  <body>
+    <script src="script.js"></script>
+<!--sem hodím toho kdo je přihlášený do pravého rohu stav a jméno přihlášenáho-->
+  <div class="row row-space">
+    <form method="POST">
+      <input type="text" id="search" name="searchbar" class="form-text col-1 m-col-3 search ">
+    </form>
+    <img src="{{profilepicture}}" alt="Profilovka" class="rounded-image">
+    {{name}}
+    </div>
+
+
+    <div class="card col-3 text-left" style="margin-top: 2%;">
+      <h2>Sample Title</h2>
+      <p>popisek.............</p>      
+    </div>
+    
+  </body>
+</html>
+<!-- E4B806 --- ŽLUTÁ
+     E8ECEE --- SVĚTLE ŠEDÁ
+     AEB5BA --- TMAVĚ ŠEDÁ 
+     2C2D20 --- ČERNÁ 
+-->

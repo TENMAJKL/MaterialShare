@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MS | Účet</title>
+  <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
+</head>
+<body>
+
+  <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
+
+  <div class="card row col-2 center" style="margin-top: 2%;">
+
+  <div class="column">
+  <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="profilový obrázek" height="50%" class="row row-center mobile-row mobile-row-center">
+  <form method="POST" class="column">
+    <div class="row row-center">
+      <input type="text" id="name" name="name" class="form-text col-1 mobile-row mobile-row-center" value="{{name}}">
+      <input type="email" id="mail" name="mail" class="form-text col-1 mobile-row mobile-row-cente" value="{{mail}}">
+    </div>
+    <div class="row">
+      <textarea placeholder="Řekni nám o sobě něco..." style="margin-top: 2%; background-color: #bdc3c7; border-color: #bdc3c7; border-style: solid; border-radius: 1rem; box-shadow:0px 0px 5px gray; outline: none; font-family: Poppins; color: black; resize: none;" id="description"  name="description" class="col-1 center mobile-row mobile-row-cente" rows="10" cols="30">{{description}}</textarea>
+    </form>
+    
+  </div>
+  </div>
+  <!--container->row, row->column-->
+  <div class="column">
+
+    <button class="form-text" onclick="document.location='https://materialshare.tenmajkl.repl.co/'">Mé uložené materiály</button>
+
+  </div>
+
+
+  </div>
+  
+</body>
+</html>

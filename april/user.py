@@ -33,3 +33,31 @@ class getUser:
   def getDescription(self):
     return userInfo[4]
 
+def mailInDb(mail):
+  database = connect()
+  cursor = database.cursor()
+  sql = "SELECT * FROM users WHERE name = %s"
+  vals = (mail,)
+  cursor.execute(sql, vals)
+  users = cursor.fetchall()
+  try:
+    users[0]
+    isin = True
+  except:
+    isin = False
+  return isin
+
+def nameInDb(name):
+  database = connect()
+  cursor = database.cursor()
+  sql = "SELECT * FROM users WHERE name = %s"
+  vals = (name,)
+  cursor.execute(sql, vals)
+  users = cursor.fetchall()
+  try:
+    users[0]
+    isin = True
+  except:
+    isin = False
+  return isin
+

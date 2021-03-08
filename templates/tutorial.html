@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MS | Dev Tutorial</title>
+  <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
+</head>
+<body>
+  <h1>CSS DOCUMENTATION</h1>
+  <h2>Col-system</h2>
+  <p>Col systém je skupina tříd, které drží šířky využívané na webu, dělí se na 3 základní:</p>
+  <ul>
+    <li>col-1; přes 3/3 stránky</li>
+    <li>col-2; přes 2/3 stránky</li>
+    <li>col-3; přes 1/3 stránky</li>
+    <li>col-half; přes 1/2 stránky</li>
+    <li>col-quarter; přes 1/4 stránky</li>
+  </ul>
+  <p>V žádném případě nepoužívejte konstatní šířky a už vůbec ne v px!</p>
+
+  <h2>Column, row</h2>
+  <p>Row je třída, ve které jsou na PC všechny objekty vedle sebe, zatímco na mobilu jsou pod sebou. Pokud ale chceme objekty pod sebe i na pc, použijeme třídu <strong>column</strong>. </p>
+
+  <h3>Mobile-row</h3>
+  <p>Občas se stane, že na mobilu potřebujete věci vedle sebe, od toho je tu třída mobile-row, v ní jsou věci vedle sebe i na mobilu. v mobile-row kromě col- používáme i m-col- tam dáváme stejnou hodnotu jako u col-</p>
+
+  <h3>row-</h3>
+  <p>Pro row existují tagy row-center a row-space, center vycentruje a space dá objekty co nejdál od sebe. Platí pro row a mobile row.</p>
+
+  <h2>Text</h2>
+  <p>Na webu se používá font Poppins. Pro text se používají tyto třídy:</p>
+  <ul>
+    <li>text-center; Text veprostřed</li>
+    <li>text-right; Text vpravo</li>
+    <li>text-left; Text vlevo</li>
+  </ul>
+
+
+  <h2>Formuláře</h2>
+  <p>Pokud chcete používat formulář, dejte na input třídu form-text, tak bude ve stylu formulářů</p> 
+
+  <h2>Karty</h2>
+  <p>Pokud chceme použít pozadí pro specifickou oblast, použijeme třídu card, šířka se nastavuje přes col- a výška ručně přes <strong>%</strong></p>
+
+  <h2>Dodatky</h2>
+  <ul>
+    <li>roudned-image; Zakulatí obrázek</li>
+  </ul>
+
+
+</body>
+</html>

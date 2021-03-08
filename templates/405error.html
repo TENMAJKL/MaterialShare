@@ -11,13 +11,10 @@
     <img class="center" src="{{url_for('static', filename='errorlogo.svg')}}" alt="" width=50%>
 
     <div class="text-center">
-      <h1>500</h1>
-      <h2>Internal server error!</h2>
-      <p>Stránka <a href="{{page}}"> {{page}}</a> je momentálně nedostupná, chyba byla automaticky zaznamenána a jsme připraveni ji opravit.</p>
+      <h1>405</h1>
+      <h2>Method Not Allowed!</h2>
+      <p>Metoda pro stránku <a href="{{page}}"> {{page}}</a> není povolena, chyba byla automaticky zaznamenána a jsme připraveni ji opravit.</p>
     </div>
 
   </body>
 </html>
-
-<!--
-<img src="{{url_for('static', filename='jmenoobrazku')}}" alt="">-->
