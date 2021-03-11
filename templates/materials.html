@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
   <head>
     <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
     <meta charset="utf-8">
@@ -10,18 +10,23 @@
   <body>
     <script src="script.js"></script>
 <!--sem hodím toho kdo je přihlášený do pravého rohu stav a jméno přihlášenáho-->
-  <div class="row row-space">
+  <div class="row row-space mobile-row">
     <form method="POST">
-      <input type="text" id="search" name="searchbar" class="form-text col-1 m-col-3 search ">
+      <input type="text" id="search" name="searchbar" class="form-text col-1 m-col-3 search " value="{{search}}">
     </form>
-    <img src="{{profilepicture}}" alt="Profilovka" class="rounded-image">
-    {{name}}
+    <div class="text-right">
+      {% if name != "" %}
+      <img src="{{profilepicture}}" alt="Profilovka" class="rounded-image profile-picture-mobile" width="5%">
+      <div class="text-right">{{name}}</div>
+      {% else %}
+      <div class="text-right"><a href="/login/">Přihlásit se</a></div>
+      {% endif %}
     </div>
-
-
+    </div>
+    
     <div class="card col-3 text-left" style="margin-top: 2%;">
-      <h2>Sample Title</h2>
-      <p>popisek.............</p>      
+      <h2>{{searched_materials[0][2]}}</h2>
+      <p>{{searched_materials[0][3]}}</p>      
     </div>
     
   </body>

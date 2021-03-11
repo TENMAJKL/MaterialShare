@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
   <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
   <meta charset="UTF-8">
@@ -18,6 +18,7 @@
     <li>col-half; přes 1/2 stránky</li>
     <li>col-quarter; přes 1/4 stránky</li>
   </ul>
+  <img src="{{url_for('static', filename='col.png')}}" alt="Col Příklad" class="col-3">
   <p>V žádném případě nepoužívejte konstatní šířky a už vůbec ne v px!</p>
 
   <h2>Column, row</h2>
@@ -28,6 +29,8 @@
 
   <h3>row-</h3>
   <p>Pro row existují tagy row-center a row-space, center vycentruje a space dá objekty co nejdál od sebe. Platí pro row a mobile row.</p>
+
+  <img src="{{url_for('static', filename='row.png')}}" alt="Row Příklad" class="col-2">
 
   <h2>Text</h2>
   <p>Na webu se používá font Poppins. Pro text se používají tyto třídy:</p>
@@ -48,6 +51,60 @@
   <ul>
     <li>roudned-image; Zakulatí obrázek</li>
   </ul>
+
+  <h2>Grid</h2>
+  <p>Grid systém, se používá, pokud chceme určitý počet věcí vedle sebe a pokud jich máme víc, tak pod sebe. Jediné co stačí, tak je dát třídu container na div, kde máme itemy a pro lepší vizi na mobilu dát na každý item m-cod-item:</p>
+  <ul>
+    <li>container-2; řadí po 2 vedle sebe</li>
+    <li>container-3; řadí po 3 vedle sebe</li>
+    <li>container-4; řadí po 4 vedle sebe</li>
+  </ul>
+
+  <img src="{{url_for('static', filename='grid.png')}}" alt="Grid Příklad" class="col-3">
+
+
+  <h1>Flask</h1>
+  <h2>Úvod do Flasku</h2>
+  <p>Flask je webový mikroframework pro python, na webu se používá pro backend a zde jsou informace co dělat jak dělat.</p>
+
+  <h2>Routování</h2>
+  <p>Pokud chceme udělat novou stránku používáme routování, to je způsob vytváření cest v adrese; Zde příklad jak vytvářet stránky pro testování</p>
+
+  <code>
+  @app.route("/name")<br>
+  def name():<br>
+    <ul>return render_template("jmeno_html_souboru")</ul><br>
+
+   </code>
+
+  <h2>Blueprinty</h2>
+  <p>Blueprint je soubor, který obshuje routy, bluepritny používáme proto, aby byl kod roztříděný.</p>
+
+  <h2>Proměnné, ify, cykly,...</h2>
+
+  <p>Flask nám umožnujě dynamické webové stránky, proto můžeme do html teplatů vkládat netradiční věci</p>
+
+  <h3>Proměnné</h3>
+  <p>Proměnné vkládáme pomocí <code>{ {jmeno} }</code></p>
+
+  <h3>Cykly</h3>
+  <p>Pokud chceme něco cyklit (materiál), použijeme cyklus: <code>{ % for % } { % endfor % }</code></p>
+
+  <h3>If</h3>
+  <p>Pokud chceme použít if, máme tyto syntaxe: <code>{ % if % } { % else % } { % elif % } { % endif % }</code></p>
+
+
+  <p>Nepoužíváme mezery mezi {}</p>
+
+
+  <h2>Formuláře</h2>
+
+  <p>Formuláře fungují stejně, akorát na začátek dáme vždy toto:</p>
+
+  <code>&ltinput type="hidden" name="csrf_token" value="{ { csrf_token() } }"/&tg</code>
+  <p>Opět mezi {} nepoužíváme mezery.</p>
+
+  <p>Jedná se o ochranu proti CSRF útokům.</p>
 
 
 </body>

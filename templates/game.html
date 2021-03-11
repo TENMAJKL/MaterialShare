@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>MS | Game</title>
+    <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
+    <link rel="stylesheet" type='text/css' href="{{url_for('static', filename='gamestyle.css')}}">
+</head>
+<body onkeydown="keyPressed(event)" onclick="pause()" class="bg-img">
+  <div class="card text-center center" style="width: 30%; margin-top: 2%; margin-bottom: 2%">
+    <p id="score"></p>
+    <p id="topscore"></p>
+    <p id="log"></p>
+  </div>
+
+  <div id="game">
+        <div id="block"></div>
+        <div id="hole"></div>
+        <div id="character"></div>
+  </div>
+
+  <p class="text-center" id="state">Klikni na okno nebo zmáčkni mezerník pro spuštění hry. Ovládání Šipkami nebo klávesami A a D</p>
+    
+</body>
+<script src="{{url_for('static', filename='gamelogic.js')}}"></script>
+</html>

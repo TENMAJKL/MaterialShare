@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
   <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
   <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
@@ -9,16 +9,22 @@
 
   <title>MS | Home</title>
 </head>
-<body class="bg-img">
+<body class="bg-img" onload="check_cookies()">
 <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
 <div class="text-center">MaterialShare</div>
 
 <form method="POST" class="row mobile-row row-center">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
   <input type="text" class="form-text col-2 m-col-2 search" name="search-term">
   <input type="image" src="{{url_for('static', filename='lupa.svg')}}" alt="Lupa" style="width:5%; height:5%">
 
   </form>
 
   <img src="{{url_for('static', filename='plus.svg')}}" alt="Add Material" class="add-material">
+
+  <div class="cookie row" id="cookie"></div>
+
 </body>
+
+<script src="{{url_for('static', filename='cookies.js')}}"></script>
 </html>

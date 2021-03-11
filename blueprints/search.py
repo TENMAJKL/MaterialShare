@@ -1,17 +1,20 @@
-from flask import Flask, Blueprint, redirect
-from april import materials
+from flask import Flask, Blueprint, redirect, session, render_template
+from april import materials, user
 search = Blueprint("searchbp", __name__) 
 
 @search.route('/search/<term>')
 def searchPage(term):
   searched = materials.getBySearch(term.replace("+", " "))
-  print(searched)
   if len(searched) == 0:
-    searched = "toto jsem nenasel je mi to lito"
+    return "Bohuzel toto jsem nenasel"
   else:
-    searched = str(searched)
-  
-  return searched
+    try:
+      name = session["name"]
+      profilepicture = user.getUser(name).getPhoto()
+    except KeyError:
+      name = ""
+      profilepicture = ""
+    return render_template("materials.html", name = name, profilepicture = profilepicture, searched_materials = searched, search = term)
 
 @search.route("/search/")
 def searchReturn():

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
   <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
   <meta charset="UTF-8">
@@ -12,11 +12,12 @@
   <div class="card center col-2" style="margin-top: 5%;">
   <div class="text-center" style="margin-bottom:2%"><h3>MaterialShare Přihlášení</h3></div>
   <form method="POST" class="text-center">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
     <label for="name" class="column">Jméno:</label>
     <input type="text" id="name" name="name" class="form-text">
     <label for="password" class="column">Heslo:</label>
     <input type="password" id="password" name="Password" class="form-text">
-    <input type="submit" name="submit" value="Přihlásit se" class="form-text row center">
+    <input type="submit" name="submit" value="Přihlásit se" class="form-text row center" style="margin-top: 2%;">
   </form>
   <div class="text-center" style="margin-top:5%">
     Nemáš účet? <a href="https://materialshare.tenmajkl.repl.co/registre">Zaregistruj se</a>

@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template, session, Blueprint, redirect
 from april import user
+from hashlib import sha256
 
 register = Blueprint("registerbp", __name__) 
 
@@ -17,10 +18,13 @@ def register_page():
       
       if password == password2 and password != name:
         exist = user.nameInDb(name)
-        mailexist = user.emailInDb(email)
+        mailexist = user.mailInDb(email)
         if exist and mailexist:
           error = "Bohužel, toto jméno už je zabrané."
         else:
+          password = sha256(password.encode('utf-8')).hexdigest()
+          user.register(name, password, email)
+          session["name"] = name
           return("dobra prace")
       elif "@" not in email:
         error = "Neplatná  adresa!"
