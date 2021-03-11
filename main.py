@@ -5,10 +5,14 @@ from flask import Flask, request, render_template, session
 from blueprints import index, search, register, login, profile
 from april import notifications
 from flask_wtf.csrf import CSRFProtect
+from dotenv import load_dotenv
+import os
+
+load_dotenv() 
 
 app = Flask(__name__) 
 
-app.config["SECRET_KEY"] = "78as465das7d86as4as65as4d5asd4as56as87das4ads56asd4as56dasd56asd5as4d56"
+app.config["SECRET_KEY"] = os.getenv("SESSIONKEY")
 
 csrf = CSRFProtect(app)
 
