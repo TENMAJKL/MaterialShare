@@ -31,3 +31,5 @@ def login_page():
 
 
   return render_template("login.html", error = error)
+
+print("$ Login blueprint loaded!\n")

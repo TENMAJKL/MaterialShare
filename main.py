@@ -1,5 +1,6 @@
-
 #Vitej v mainu, zde se budou registrovat blueprinty
+
+print("Blueprints->\n")
 
 from flask import Flask, request, render_template, session
 from blueprints import index, search, register, login, profile
@@ -7,6 +8,8 @@ from april import notifications
 from flask_wtf.csrf import CSRFProtect
 from dotenv import load_dotenv
 import os
+
+print("<-\n")
 
 load_dotenv() 
 

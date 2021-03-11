@@ -9,3 +9,6 @@ def main():
       return redirect("/search/"+term.replace(" ", "+"))
 
   return render_template("index.html")
+
+
+print("$ Index blueprint loaded!")

@@ -34,3 +34,5 @@ def register_page():
 
 
   return render_template("registre.html", error = error)
+
+print("$ Register blueprint loaded!")

@@ -19,3 +19,6 @@ def searchPage(term):
 @search.route("/search/")
 def searchReturn():
   return redirect("/")
+
+
+print("$ Search blueprint loaded!")
