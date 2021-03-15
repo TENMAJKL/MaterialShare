@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 a {
   text-decoration: none;
-  color: black;
+  color: #57606f;
   transition-duration: 2s;
 }
 a:hover {
-  color: #57606f;
+  color: #eeeeee;
 }
 
 body {
@@ -262,3 +262,14 @@ pre.code code::before {
 .cookie {
   animation: cookie 2s;
 }
+
+.textbox {
+    margin-top: 2%; 
+    background-color: #bdc3c7; 
+    border-color: #bdc3c7; 
+    border-style: solid; 
+    border-radius: 1rem; 
+    outline: none; 
+    resize: none;
+}
+

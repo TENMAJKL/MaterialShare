@@ -9,7 +9,7 @@
 <body>
   <pre class="code terminal">
     {% for line in text.split("\n") %}
-    <code>{{line}}</code>
+    <code>{{line.replace("a", "<a>")|safe}}</code>
     {% endfor %}
 </pre>
 </body>

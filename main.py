@@ -65,9 +65,10 @@ def tutorial():
 
 
 
-@app.route("/profile")
+@app.route("/test")
 def profile():
-  return render_template("profile.html")
+    text = "ahoj"
+    return render_template("sandbox.html", text = text)
 
 @app.route("/forgotten-password")
 def forgottenpassword():
