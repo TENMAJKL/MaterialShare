@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-*{
-  box-sizing: border-box
-}
 a {
   text-decoration: none;
   color: black;
@@ -52,6 +49,7 @@ body {
     margin-top: 2%;
     margin-bottom: 2%;
     display: flex !important;
+    align-items: center;
   }
   .mobile-row-space {
     justify-content: space-between;
@@ -83,6 +81,10 @@ body {
   }
   .m-con-item {
     margin-bottom: 3%;
+  }
+  .search-button {
+      width: 5%;
+      height: 5%;
   }
 }
 
@@ -124,7 +126,7 @@ body {
   }
 
   .add-material {
-    width: 5%;
+    width: 4rem;
     margin-right: 1%;
     margin-bottom: 1%;
   }
@@ -158,7 +160,12 @@ body {
   .container-4 {
     grid-template-columns: 20% 20% 20% 20%;
   }
-
+  
+    
+  .search-button {
+      width: 2%;
+      height: 2%;
+  }
 
 }
 .column {
@@ -242,7 +249,16 @@ pre.code code::before {
   content: counter(listing) ". ";
   display: inline-block;
   width: 2rem;
-  padding-left: auto; /* now works */
-  margin-left: auto;  /* now works */
-  text-align: right;  /* now works */
+  padding-left: auto; 
+  margin-left: auto; 
+  text-align: right;  
+}
+
+@keyframes cookie {
+  from {opacity: 0; margin-left: -10%};
+  to  {opacity: 100; margin-left: 1%};
+}
+
+.cookie {
+  animation: cookie 2s;
 }

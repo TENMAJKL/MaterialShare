@@ -37,6 +37,9 @@ class getUser:
   def getMail(self):
     return userInfo[3]
 
+  def getDbPerm(self):
+    return userInfo[7]
+
 def mailInDb(mail):
   database = connect()
   cursor = database.cursor()

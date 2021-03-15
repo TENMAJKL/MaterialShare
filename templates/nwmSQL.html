@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MS | SQL</title>
+  <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
+</head>
+<body>
+  <form method="POST">
+    <div class="row row-center">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+      <input type="text" class="form-text col-2" style="margin-right: 2%" name="Command" id="Command">
+      <input type="submit">
+    </div>
+  </form>
+  <pre class="code terminal">
+    <table class="row row-center">
+        
+    {% for column in table %}
+      <tr>
+      {% for item in column%}
+      <td>{{ item }}</td>
+      {% endfor %}
+      </tr>
+      
+      {% endfor %}
+        
+    </table>
+    </pre>
+
+</body>
+</html>
