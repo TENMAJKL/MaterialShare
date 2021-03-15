@@ -33,6 +33,6 @@ def register_page():
         
 
 
-  return render_template("registre.html", error = error)
+  return render_template("auth/register.html", error = error)
 
 print("$ Register blueprint loaded!")

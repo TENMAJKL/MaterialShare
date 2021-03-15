@@ -3,13 +3,14 @@ function getCookieValue(name) {
   return result ? result.pop() : ""
 }
 
-
 var block = document.getElementById("block");
 var hole = document.getElementById("hole");
 var character = document.getElementById("character");
 var score = 0;
 var topscore = getCookieValue("topscore");
 var paused = true;
+var rightHold = false;
+var leftHold = false;
 
 
 
@@ -43,18 +44,10 @@ function keyPressed(event) {
   var key = event.key;
   if(paused == false){
   if(key == "ArrowLeft" || key == "a"){
-    var characterPos = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
-    var gameWidth = parseInt(window.getComputedStyle(game).getPropertyValue("width"));
-    if (characterPos > 0){
-      character.style.left = (characterPos-((gameWidth/100)*2))+"px";
-    }
+    goLeft();
   }
   if(key == "ArrowRight" || key == "d"){
-    var characterPos = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
-    var gameWidth = parseInt(window.getComputedStyle(game).getPropertyValue("width"));
-    if (characterPos < gameWidth-32){
-      character.style.left = (characterPos+((gameWidth/100)*2))+"px";
-    }
+    goRight();
   }
   }
   if(key == " "){
@@ -76,6 +69,15 @@ setInterval(function(){
   }else{
     document.getElementById("score").innerHTML = "score: " + score;
   }
+  
+if(rightHold == true){
+  goRightMobile();
+}
+
+if(leftHold == true){
+  goLeftMobile();
+}
+  
 }}, 10);
 
 function gameover(){
@@ -103,4 +105,53 @@ function pause(){
     hole.style.animationPlayState = "paused";
     document.getElementById("state").innerHTML = "Pozastaveno";
   }
+}
+
+function right(){
+  rightHold = true;
+} 
+
+function left(){
+  leftHold = true;
+} 
+
+function mouseUp(){
+  rightHold = false;
+  leftHold = false;
+}
+
+function goRight(){
+  if(paused == true) return
+  var characterPos = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    var gameWidth = parseInt(window.getComputedStyle(game).getPropertyValue("width"));
+    if (characterPos < gameWidth-32){
+      character.style.left = (characterPos+((gameWidth/100)*2))+"px";
+    }
+}
+
+function goLeft(){
+  if(paused == true) return
+  var characterPos = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    var gameWidth = parseInt(window.getComputedStyle(game).getPropertyValue("width"));
+    if (characterPos > 0){
+      character.style.left = (characterPos-((gameWidth/100)*2))+"px";
+    }
+}
+
+function goRightMobile(){
+  if(paused == true) return
+  var characterPos = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    var gameWidth = parseInt(window.getComputedStyle(game).getPropertyValue("width"));
+    if (characterPos > 0){
+      character.style.left = (characterPos+((gameWidth/100)*0.8))+"px";
+    }
+}
+
+function goLeftMobile(){
+  if(paused == true) return
+  var characterPos = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    var gameWidth = parseInt(window.getComputedStyle(game).getPropertyValue("width"));
+    if (characterPos > 0){
+      character.style.left = (characterPos-((gameWidth/100)*0.4))+"px";
+    }
 }

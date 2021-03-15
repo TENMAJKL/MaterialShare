@@ -16,4 +16,4 @@ def profile_page():
     email = user_db.getMail()
     description = user_db.getDescription()
     profilepicture = user_db.getPhoto()
-    return render_template("profile.html", name=name, email=email, description=description, profilepicture= profilepicture)
+    return render_template("profile/profile.html", name=name, email=email, description=description, profilepicture= profilepicture)
