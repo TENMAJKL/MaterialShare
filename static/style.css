@@ -264,12 +264,21 @@ pre.code code::before {
 }
 
 .textbox {
-    margin-top: 2%; 
+    /*margin-top: 2%; 
     background-color: #bdc3c7; 
     border-color: #bdc3c7; 
     border-style: solid; 
     border-radius: 1rem; 
     outline: none; 
-    resize: none;
+    resize: none;*/
+
+    background-color:  #bdc3c7;
+    border-color: #bdc3c7;
+    border-style: solid;
+    border-radius: 1rem;
+    box-shadow:0px 0px 5px gray;
+    outline: none;
+    font-family: Poppins;
+    color: black;
 }
 
