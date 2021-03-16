@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MS | Dev Tutorial</title>
-  <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
-</head>
-<body>
+{% extends "layout.html" %}
+{% block title %} MS | Tutorial {% endblock %}
+
   <h1>CSS DOCUMENTATION</h1>
   <h2>Col-system</h2>
   <p>Col systém je skupina tříd, které drží šířky využívané na webu, dělí se na 3 základní:</p>
@@ -42,7 +35,7 @@
 
 
   <h2>Formuláře</h2>
-  <p>Pokud chcete používat formulář, dejte na input třídu form-text, tak bude ve stylu formulářů</p> 
+  <p>Pokud chcete používat formulář, dejte na input třídu form-text, tak bude ve stylu formulářů</p>
 
   <h2>Karty</h2>
   <p>Pokud chceme použít pozadí pro specifickou oblast, použijeme třídu card, šířka se nastavuje přes col- a výška ručně přes <strong>%</strong></p>
@@ -105,7 +98,3 @@
   <p>Opět mezi {} nepoužíváme mezery.</p>
 
   <p>Jedná se o ochranu proti CSRF útokům.</p>
-
-
-</body>
-</html>

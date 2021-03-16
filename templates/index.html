@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
-  <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
-
-  <title>MS | Home</title>
-</head>
+{% extends "layout.html" %}
+{% block title %} MS | Home {% endblock %}
 <body class="bg-img" onload="check_cookies()">
 <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
 <div class="text-center">MaterialShare</div>
@@ -19,13 +10,11 @@
   <input type="image" src="{{url_for('static', filename='lupa.svg')}}" alt="Lupa" class="search-button">
 
   </form>
-  
+
 
   <img src="{{url_for('static', filename='plus.svg')}}" alt="Add Material" class="add-material">
 
   <div class="cookie row" id="cookie"></div>
 
-</body>
 
 <script src="{{url_for('static', filename='cookies.js')}}"></script>
-</html>
