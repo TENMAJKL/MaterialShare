@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% block title %} MS | Profile {% endblock %}
-
+{% block content %}
+<body>
   <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
 
   <div class="card row col-2 center" style="margin-top: 2%;">
@@ -23,3 +24,5 @@
 
 
   </div>
+</body>
+{% endblock content %}

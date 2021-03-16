@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block title %} MS | Login {% endblock %}
+{% block content %}
 <body class="bg-img">
   <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
   <div class="card center col-2" style="margin-top: 5%;">
@@ -18,3 +19,5 @@
     Zapoměl jsi heslo? <a href="https://materialshare.tenmajkl.repl.co/forgotten-password">Poslat E-mail o změně hesla</a>
      </div>
      </div>
+</body>
+{% endblock content %}

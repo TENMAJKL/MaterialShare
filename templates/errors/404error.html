@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block title %} MS | 404 {% endblock %}
+{% block content %}
   <body class="bg-img">
     <img class="center" src="{{url_for('static', filename='errorlogo.svg')}}" alt="" width=50%>
 
@@ -9,3 +10,5 @@
       <p>Stránka <a href="{{page}}"> {{page}}</a> nebyla nalezena. Zkontrolujte zda jste adresu zadali správně.</p>
       <button class="form-text" onclick="document.location='https://materialshare.tenmajkl.repl.co/game'">Top Secret</button>
     </div>
+    </body>
+{% endblock content %}

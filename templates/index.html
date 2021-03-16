@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block title %} MS | Home {% endblock %}
+{% block content %}
 <body class="bg-img" onload="check_cookies()">
 <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
 <div class="text-center">MaterialShare</div>
@@ -18,3 +19,5 @@
 
 
 <script src="{{url_for('static', filename='cookies.js')}}"></script>
+</body>
+    {% endblock content %}
