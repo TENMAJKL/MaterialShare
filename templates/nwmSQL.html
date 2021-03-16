@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block title %} MS | Database {% endblock %}
+{% block content %}
   <form method="POST">
     <div class="row row-center">
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
@@ -21,3 +22,5 @@
 
     </table>
     </pre>
+
+{% endblock content %}

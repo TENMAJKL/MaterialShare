@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 {% block title %} MS | Register {% endblock %}
+
+{% block content %}
 <body class="bg-img">
   <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
   <div class="card center col-2" style="margin-top: 5%;">
@@ -34,3 +36,6 @@
     Jsi už zaregistrovaný? <a href="https://materialshare.tenmajkl.repl.co/login">Přihlaš se</a>
      </div>
   </div>
+</body>
+{% endblock content %}
+

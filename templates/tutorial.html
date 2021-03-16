@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
 {% block title %} MS | Tutorial {% endblock %}
 
+{% block content %}
+<body>
+
   <h1>CSS DOCUMENTATION</h1>
   <h2>Col-system</h2>
   <p>Col systém je skupina tříd, které drží šířky využívané na webu, dělí se na 3 základní:</p>
@@ -98,3 +101,19 @@
   <p>Opět mezi {} nepoužíváme mezery.</p>
 
   <p>Jedná se o ochranu proti CSRF útokům.</p>
+
+  <h2>extends, block</h2>
+  <p>Pro usnandnění práce máme v templatech tyto 2 tagy: extends a block, zde layout pro používání:</p>
+  <pre class="code terminal">
+<code>{ % extends "layout.html" % }</code>
+<code>{ % block title % } MS | Název stránky { % endblock % }</code>
+<code>{ % block content % }</code>
+<code>&lt;body&gt;</code>
+<code>Zde kontent</code>
+<code>Extends a block pochopitelně nemá mezeru mezi { a %</code>
+<code>&lt;/body&gt;</code>
+<code>{ % endblock content % }</code>
+      </pre>
+</body>
+{% endblock content %}
+

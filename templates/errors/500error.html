@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 {% block title %} MS | 505 {% endblock %}
+{% block content %}
+
   <body class="bg-img">
     <img class="center" src="{{url_for('static', filename='errorlogo.svg')}}" alt="" width=50%>
 
@@ -9,6 +11,9 @@
       <p>Stránka <a href="{{page}}"> {{page}}</a> je momentálně nedostupná, chyba byla automaticky zaznamenána a jsme připraveni ji opravit.</p>
       <button class="form-text" onclick="document.location='https://materialshare.tenmajkl.repl.co/game'">Top Secret</button>
     </div>
+
+    </body>
+{% endblock content %}
 
 <!--
 <img src="{{url_for('static', filename='jmenoobrazku')}}" alt="">-->
