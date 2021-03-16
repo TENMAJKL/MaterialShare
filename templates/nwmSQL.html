@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MS | SQL</title>
-  <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
-</head>
-<body>
+{% extends "layout.html" %}
+{% block title %} MS | Database {% endblock %}
   <form method="POST">
     <div class="row row-center">
       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
@@ -16,18 +9,15 @@
   </form>
   <pre class="code terminal">
     <table class="row row-center">
-        
+
     {% for column in table %}
       <tr>
       {% for item in column%}
       <td>{{ item }}</td>
       {% endfor %}
       </tr>
-      
+
       {% endfor %}
-        
+
     </table>
     </pre>
-
-</body>
-</html>
