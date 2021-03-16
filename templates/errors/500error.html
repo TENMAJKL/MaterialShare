@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="cs">
-  <head>
-    <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
-  </head>
+{% extends "layout.html" %}
+{% block title %} MS | 505 {% endblock %}
   <body class="bg-img">
     <img class="center" src="{{url_for('static', filename='errorlogo.svg')}}" alt="" width=50%>
 
@@ -16,9 +9,6 @@
       <p>Stránka <a href="{{page}}"> {{page}}</a> je momentálně nedostupná, chyba byla automaticky zaznamenána a jsme připraveni ji opravit.</p>
       <button class="form-text" onclick="document.location='https://materialshare.tenmajkl.repl.co/game'">Top Secret</button>
     </div>
-
-  </body>
-</html>
 
 <!--
 <img src="{{url_for('static', filename='jmenoobrazku')}}" alt="">-->

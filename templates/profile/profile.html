@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MS | Účet</title>
-  <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
-</head>
-<body>
+{% extends "layout.html" %}
+{% block title %} MS | Profile {% endblock %}
 
   <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
 
@@ -23,7 +15,7 @@
     <div class="row">
       <textarea placeholder="Řekni nám o sobě něco..." id="description"  name="description" class="col-1 center mobile-row textbox" rows="10" cols="30">{{description}}</textarea>
     </form>
-    
+
   </div>
   </div>
   <!--container->row, row->column-->
@@ -31,6 +23,3 @@
 
 
   </div>
-  
-</body>
-</html>

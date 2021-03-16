@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <link rel="shortcut icon" href="{{url_for('static', filename='materialbg.svg')}}" type="image/x-icon">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MS | Přihlášení</title>
-  <link rel="stylesheet" type='text/css' href="https://materialshare.tenmajkl.repl.co/static/style.css">
-</head>
+{% extends "layout.html" %}
+{% block title %} MS | Login {% endblock %}
 <body class="bg-img">
   <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
   <div class="card center col-2" style="margin-top: 5%;">
@@ -25,5 +18,3 @@
     Zapoměl jsi heslo? <a href="https://materialshare.tenmajkl.repl.co/forgotten-password">Poslat E-mail o změně hesla</a>
      </div>
      </div>
-</body>
-</html>
