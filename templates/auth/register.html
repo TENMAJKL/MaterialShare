@@ -1,34 +1,35 @@
 {% extends "layout.html" %}
 {% block title %} MS | Register {% endblock %}
-
 {% block content %}
 <body class="bg-img">
-  <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
-  <div class="card center col-2" style="margin-top: 5%;">
+  <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="15%" class="center">
+  <div class="card center col-3" style="margin-top: 5%;">
   <div class="text-center" style="margin-bottom:5%"><h3>MaterialShare register</h3></div>
   <form method="POST" class="text-center">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
     <div>
     <label for="name" class="column" style="margin-top: 1%;">Jméno:</label>
-    <input type="text" id="name" name="name" class="form-text" maxlength="20">
+    <input type="text" id="name" name="name" class="form-text col-2" maxlength="20">
     </div>
 
     <div>
     <label for="password" class="column" style="margin-top: 1%;">Heslo:</label>
-    <input type="password" id="password" name="Password" class="form-text">
+    <input type="password" id="password" name="Password" class="form-text col-2">
     </div>
 
     <div>
-    <label for="password2" class="column" style="margin-top: 1%;">Znovu heslo:</label>
-    <input type="password" id="password2" name="Password2" class="form-text">
+    <label for="password2" class="column" style="margin-top: 1%;">Heslo znovu:</label>
+    <input type="password" id="password2" name="Password2" class="form-text col-2">
     </div>
 
     <div>
     <label for="mail" class="column" style="margin-top: 1%;">Mail:</label>
-    <input type="email" id="mail" name="mail" class="form-text">
+    <input type="email" id="mail" name="mail" class="form-text col-2">
     </div>
 
-    <input type="submit" name="submit" value="Zaregistrovat se" class="form-text" style="margin-top: 5%;">
+    <button type="submit" name="submit" class="form-text" style="margin-top: 5%;">
+        Zaregistrovat se
+        </button>
   </form>
     <div class="text-center">{{error}}</div>
 
@@ -38,4 +39,3 @@
   </div>
 </body>
 {% endblock content %}
-

@@ -15,7 +15,11 @@ def login_page():
         name = request.form.get("name")
         password = request.form.get("Password")
         
-        password = sha256(password.encode('utf-8')).hexdigest() 
+        password = password + user.getUser(name).getSalt() 
+
+        password = sha256(password.encode('utf-8')).hexdigest()
+
+        
 
         
 

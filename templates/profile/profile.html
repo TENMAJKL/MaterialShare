@@ -1,15 +1,12 @@
 {% extends "layout.html" %}
 {% block title %} MS | Profile {% endblock %}
-
 {% block content %}
 <body>
 
-  <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo" width="35%" class="center">
-
-  <div class="card row col-2 center" style="margin-top: 2%;">
+  <div class="card row col-3 center" style="margin-top: 2%;">
 
   <div class="column">
-  <img src="{{profilepicture}}" alt="profilový obrázek" height="50%" class="center rounded-image col-3">
+  <img src="{{profilepicture}}" alt="profilový obrázek" width="15%" class="center rounded-image">
   <form method="POST" class="column">
     <div class="row row-center">
       <input placeholder="Jméno" type="text" id="name" name="name" class="form-text col-1 mobile-row mobile-row-center" value="{{name}}">
@@ -26,6 +23,5 @@
 
 
   </div>
-
 </body>
 {% endblock content %}

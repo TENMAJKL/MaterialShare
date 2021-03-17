@@ -9,7 +9,13 @@
 <body>
   <pre class="code terminal">
     {% for line in text.split("\n") %}
-    <code>{{line.replace("a", "<a>")|safe}}</code>
+    <code>
+        {% for word in text.split(" ")%}
+        {% if word.startswith("[") and word.endswith("]") %}
+        <img src="{{word.replace('[', ' ').replace(']', ' ')}}">
+        {% endif %}
+        {% endfor %}
+    </code>
     {% endfor %}
 </pre>
 </body>

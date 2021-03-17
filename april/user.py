@@ -29,16 +29,19 @@ class getUser:
     return userInfo[2]
 
   def getPhoto(self):
-    return userInfo[6]
+    return userInfo[7]
   
   def getDescription(self):
-    return userInfo[4]
+    return userInfo[5]
   
   def getMail(self):
-    return userInfo[3]
+    return userInfo[4]
 
   def getDbPerm(self):
-    return userInfo[7]
+    return userInfo[8]
+
+  def getSalt(self):
+      return userInfo[3]
 
 def mailInDb(mail):
   database = connect()
@@ -79,13 +82,13 @@ def generateId():
     id = 0
   return id + 1
 
-def register(name, password, mail):
+def register(name, password, salt, mail):
   database = connect()
   cursor = database.cursor()
-  sql = "INSERT INTO users (id,	name,	password, email, profiledate) VALUES(%s, %s, %s, %s, %s)"
+  sql = "INSERT INTO users (id,	name,	password, salt, email, profiledate) VALUES(%s, %s, %s, %s, %s, %s)"
   now = datetime.now().strftime('%Y-%m-%d')
   id = str(generateId())
-  vals = (id, name, password, mail, now, )
+  vals = (id, name, password, salt, mail, now, )
   print(vals)
   cursor.execute(sql, vals)
   database.commit()
