@@ -18,7 +18,7 @@ body {
  background-color:  #bdc3c7;
  border-color: #bdc3c7;
  border-style: solid;
- border-radius: 10rem;
+ border-radius: 5rem;
  box-shadow:0px 0px 5px gray;
  outline: none;
   font-family: Poppins;
@@ -196,9 +196,9 @@ body {
   background-color: #aeaeae;
   border-style: solid;
   border-color: #aeaeae;
-  border-radius: 3rem;
+  border-radius: 1.5rem;
   /*height: rucne*/
-  padding: 5%;
+  padding: 2%;
 }
 
 .bg-img {
@@ -264,13 +264,13 @@ pre.code code::before {
 }
 
 .textbox {
-    /*margin-top: 2%; 
+    margin-top: 2%; 
     background-color: #bdc3c7; 
     border-color: #bdc3c7; 
     border-style: solid; 
     border-radius: 1rem; 
     outline: none; 
-    resize: none;*/
+    resize: none;
 
     background-color:  #bdc3c7;
     border-color: #bdc3c7;

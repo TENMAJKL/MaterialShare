@@ -67,7 +67,7 @@ def tutorial():
 
 @app.route("/test")
 def profile():
-    text = "ahoj"
+    text = "[ahoj]"
     return render_template("sandbox.html", text = text)
 
 @app.route("/forgotten-password")

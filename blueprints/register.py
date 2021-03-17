@@ -1,8 +1,11 @@
 from flask import Flask, request, render_template, session, Blueprint, redirect
 from april import user
 from hashlib import sha256
+import random
 
 register = Blueprint("registerbp", __name__) 
+
+salt_template = "1234567890qwertyuiopasdfghjklzxcvbnm"
 
 @register.route("/register/", methods=["GET", "POST"])
 def register_page():
@@ -22,12 +25,12 @@ def register_page():
         if exist and mailexist:
           error = "Bohužel, toto jméno už je zabrané."
         else:
+          salt = "".join(random.sample(salt_template, 10))
+          password = password + salt
           password = sha256(password.encode('utf-8')).hexdigest()
-          user.register(name, password, email)
+          user.register(name, password, salt, email)
           session["name"] = name
           return("dobra prace")
-      elif "@" not in email:
-        error = "Neplatná  adresa!"
       else:
         error = "Hesla se neshodují, nebo je jméno stejné jako heslo"
         

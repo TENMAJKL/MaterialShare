@@ -1,8 +1,6 @@
 {% extends "layout.html" %}
 {% block title %} MS | Game {% endblock %}
-
 {% block content %}
-
 <body onkeydown="keyPressed(event)" class="bg-img">
   <div class="card text-center center" style="width: 30%; margin-top: 2%; margin-bottom: -2%">
     <p id="score"></p>
@@ -34,5 +32,4 @@
 
 
 <script src="{{url_for('static', filename='gamelogic.js')}}"></script>
-
 {% endblock content %}
