@@ -4,7 +4,7 @@ print("Blueprints->\n")
 
 from flask import Flask, request, render_template, session, redirect
 from blueprints import index, search, register, login, profile
-from april import notifications, user, dbuniversal
+from april import notifications, user, dbuniversal, material
 from flask_wtf.csrf import CSRFProtect
 from dotenv import load_dotenv
 import os
@@ -89,6 +89,13 @@ def game():
   else:
     photo = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fweneedfun.com%2Fwp-content%2Fuploads%2F2016%2F08%2FThe-Color-Black-9.jpg&f=1&nofb=1"
   return render_template("game.html", photo = photo)
+
+@app.route("/apitest/", methods = ["POST"])
+def api():
+    if request.method == "POST":
+        material.newMaterial(request.get_json("name"), request.get_json("title"), request.get_json("content"))
+    return "Sucess"
+
 
 app.run(host='0.0.0.0', port=5000) 
 
