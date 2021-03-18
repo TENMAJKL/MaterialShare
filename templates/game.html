@@ -1,4 +1,9 @@
 {% extends "layout.html" %}
+
+{% block extern_style %}
+<link rel="stylesheet" href="{{url_for('static', filename='gamestyle.css')}}">
+{% endblock extern_style %}
+
 {% block title %} MS | Game {% endblock %}
 {% block content %}
 <body onkeydown="keyPressed(event)" class="bg-img">
