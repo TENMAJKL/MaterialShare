@@ -1,4 +1,5 @@
 from april.connector import connect
+from datetime import datetime
 
 database = connect()
 global cursor 
@@ -7,7 +8,7 @@ cursor = database.cursor()
 def generateId():
     database = connect()
     cursor = database.cursor()
-    sql = "SELECT id FROM materials WHERE materialid = (SELECT MAX(id) FROM users)"
+    sql = "SELECT materialid FROM materials WHERE materialid = (SELECT MAX(id) FROM users)"
     cursor.execute(sql)
     try:
         id = cursor.fetchall()[0][0]
