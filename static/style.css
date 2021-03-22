@@ -1,4 +1,15 @@
+/*Css built by Michal thanks to
+ *  Petr->Aditional css
+ *  CoolFido->Help with css pain
+ *  w3schools->Perfect css docs
+ *  Vim
+ *  Git
+ * */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+
 a {
   text-decoration: none;
   color: #57606f;
@@ -282,3 +293,7 @@ pre.code code::before {
     color: black;
 }
 
+select {
+    background-color: #bdc3c7;
+    border: 1rem solid #bdc3c7;
+}
