@@ -65,12 +65,30 @@ def test():
 def tutorial():
   return render_template("tutorial.html")
 
+@app.route("/500")
+def e500():
+  return render_template("errors/500error.html", page = request.path)
 
+@app.route("/502")
+def e502():
+  return render_template("errors/502error.html", page = request.path)
+
+@app.route("/405")
+def e405():
+  return render_template("errors/405error.html", page = request.path)
 
 @app.route("/test")
 def profile():
     text = "[ahoj]"
     return render_template("sandbox.html", text = text)
+
+@app.route("/credits")
+def credit():
+    return render_template("credits.html")
+
+@app.route("/art")
+def art():
+    return render_template("art.html")
 
 @app.route("/forgotten-password")
 def forgottenpassword():

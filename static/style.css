@@ -78,6 +78,7 @@ body {
    .container-2, .container-3, .container-4 {
     display: block;
     padding: 5%;
+    margin:2%;
   }
   .m-con-item {
     margin-bottom: 3%;
