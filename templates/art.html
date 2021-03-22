@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %} MS | Credits {% endblock %}
+{% block content %}
+<body>
+  <div class="container-2">
+  <div class="card">
+    <p>Logo: </p>
+    <img src="{{url_for('static', filename='sharelogo.svg')}}" alt="Logo">
+  </div>
+  <div class="card">
+    <p>Lupa: </p>
+    <img src="{{url_for('static', filename='lupa.svg')}}" alt="Lupa">
+  </div>
+  <div class="card">
+    <p>Plus: </p>
+    <img src="{{url_for('static', filename='plus.svg')}}" alt="Add Material">
+  </div>
+  <div class="card">
+    <p>Pozadí: </p>
+    <img src="{{url_for('static', filename='materialbg.svg')}}" alt="Background">
+  </div>
+  </div>
+</body>
+{% endblock content %}
