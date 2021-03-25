@@ -9,7 +9,7 @@ function getCookieValue(name) {
     if (accepted != true) 
     {
       var div_cookie = document.getElementById("cookie"); 
-      div_cookie.innerHTML = '<div>Používáme cookies pro zlepšení našich služeb.<br><a href="/cookies">Více informací</a></div><form onsubmit="accept_cookies()"><button>Přijmout</button></form>'
+      div_cookie.innerHTML = '<div>Používáme cookies pro zlepšení našich služeb.<br><a href="/cookies">Více informací</a></div><form onsubmit="accept_cookies()"><button class="col-1">Přijmout</button></form>'
     } 
   }
 

@@ -36,7 +36,7 @@
 
 
   <h2>Formuláře</h2>
-  <p>Pokud chcete používat formulář, dejte na input třídu form-text, tak bude ve stylu formulářů</p>
+  <p>Pokud chcete používat formulář, dejte na input třídu form-text, tak bude ve stylu formulářů. Na talčítka používáme pouze tag button, bez ničeho ana textareu třídu textbox.</p>
 
   <h2>Karty</h2>
   <p>Pokud chceme použít pozadí pro specifickou oblast, použijeme třídu card, šířka se nastavuje přes col- a výška ručně přes <strong>%</strong></p>
@@ -79,38 +79,41 @@
   <p>Flask nám umožnujě dynamické webové stránky, proto můžeme do html teplatů vkládat netradiční věci</p>
 
   <h3>Proměnné</h3>
-  <p>Proměnné vkládáme pomocí <code>{ {jmeno} }</code></p>
+  <p>Proměnné vkládáme pomocí <code>&#123{jmeno}&#125</code></p>
 
   <h3>Cykly</h3>
-  <p>Pokud chceme něco cyklit (materiál), použijeme cyklus: <code>{ % for % } { % endfor % }</code></p>
+  <p>Pokud chceme něco cyklit (materiál), použijeme cyklus: <code>&#123% for %&#125 &#123% endfor %&#125</code></p>
 
   <h3>If</h3>
-  <p>Pokud chceme použít if, máme tyto syntaxe: <code>{ % if % } { % else % } { % elif % } { % endif % }</code></p>
+  <p>Pokud chceme použít if, máme tyto syntaxe: <code>&#123% if %&#125 &#123% else %&#125 &#123% elif %&#125 &#123% endif %&#125</code></p>
 
 
-  <p>Nepoužíváme mezery mezi {}</p>
 
 
   <h2>Formuláře</h2>
 
   <p>Formuláře fungují stejně, akorát na začátek dáme vždy toto:</p>
 
-  <code>&ltinput type="hidden" name="csrf_token" value="{ { csrf_token() } }"/&tg</code>
-  <p>Opět mezi {} nepoužíváme mezery.</p>
+  <code>&ltinput type="hidden" name="csrf_token" value="&#123{ csrf_token() }&#125"&gt</code>
 
   <p>Jedná se o ochranu proti CSRF útokům.</p>
 
   <h2>extends, block</h2>
   <p>Pro usnandnění práce máme v templatech tyto 2 tagy: extends a block, zde layout pro používání:</p>
-  <pre class="code terminal">
-<code>{ % extends "layout.html" % }</code>
-<code>{ % block title % } MS | Název stránky { % endblock % }</code>
-<code>{ % block content % }</code>
-<code>&lt;body&gt;</code>
-<code>Zde kontent</code>
-<code>Extends a block pochopitelně nemá mezeru mezi { a %</code>
-<code>&lt;/body&gt;</code>
-<code>{ % endblock content % }</code>
-      </pre>
+    <pre class="code terminal">
+        <code>&#123% extends "layout.html" %&#125</code>
+        <code>&#123% block title %&#125 MS | Název stránky &#123% endblock %&#125</code>
+        <code>&#123% block content %&#125</code>
+        <code>&lt;body&gt;</code>
+        <code>Zde kontent</code>
+        <code>&lt;/body&gt;</code>
+        <code>&#123% endblock content %&#125</code>
+    </pre>
 </body>
 {% endblock content %}
+
+<!-- 
+
+    Michal Křipač
+
+-->

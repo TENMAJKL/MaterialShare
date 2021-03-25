@@ -14,7 +14,7 @@ def searchPage(term):
     except KeyError:
       name = ""
       profilepicture = ""
-    return render_template("materials/materials.html", name = name, profilepicture = profilepicture, searched_materials = searched, search = term)
+    return render_template("materials/searched_materials.html", name = name, profilepicture = profilepicture, searched_materials = searched, search = term)
 
 @search.route("/search/")
 def searchReturn():
