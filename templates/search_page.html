@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block title %} MS | Materials {% endblock %}
+{% block content %}
+<body>
+  <div class="row row-space">
+    <form method="POST">
+      <input type="text" id="search" name="searchbar" class="form-text col-1 m-col-3 search ">
+
+      
+    </form>
+    <img src="{{profilepicture}}" alt="Profilovka" class="rounded-image">
+    {{name}}
+    </div>
+    
+<div class="card col-3 text-left" style="margin-top: 2%;">
+      <h2>Sample Title</h2>
+      <p>popisek.............</p>
+</div>
+<br>
+
+<div class="row">
+<form action="/action_page.php">
+
+</form>
+</div>
+
+</body>
+{% endblock content %}
+
+
+<!--
+Ondra
+
+udělej podrobné vyhledávání-> stránku kde bude html 2x dropdown (pozdeji nastyluji)
+ jednou na vyber kategorie a jednou na vyber rocniku,
+ na ni odkaz z jakehokoliv vyhledavani na strance,
+ na strance pro vyhledane mateiral dej nejakou kartu (asi col-2/1) a do ni dej cast textu, title, autora a datum
+
+container na karty (2-3)
+
+pod search barem 2 selecty s výběrem tříd a kategoríí
+
+-->
+
+<!--Ondřej Pazourek -->

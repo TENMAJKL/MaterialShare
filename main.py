@@ -90,17 +90,25 @@ def credit():
 def art():
     return render_template("art.html")
 
+@app.route("/upravit", methods=["POST", "GET"])
+def upravit():
+    return render_template("upravit-vlozit.html", action_name = 'Upravit', title="Lorem ipsum", content="Dolor sit amet ")
+
+@app.route("/novy", methods=["POST", "GET"])
+def vlozit():
+    return render_template("upravit-vlozit.html", action_name = 'Nový', title="Lorem ipsum", content="Dolor sit amet ")
+
 @app.route("/forgotten-password")
 def forgottenpassword():
   return render_template("forgotten-password.html")
 
+#@app.route("/materials")
+#def materials():
+#  return render_template("searched_materials.html")
+
 @app.route("/materials")
 def materials():
-  return render_template("materials.html")
-
-@app.route("/game2")
-def game2():
-  return render_template("unityGame.html")
+  return render_template("search_page.html")
 
 @app.route("/game")
 def game():

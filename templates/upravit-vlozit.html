@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %} MS | {{ action_name }} material {% endblock %}
+{% block content %}
+
+
+<body class="bg-img" onload="check_cookies()">
+	<form method="POST">
+    <h1 style="margin-left: 2%">{{ action_name }} material <br></h>
+
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input style="margin-left: 2%" type="text" class="form-text" value="{{ title }}">
+		<textarea style="margin-left: 2%" class="textbox col-1" rows="15">
+
+        {{ content }}
+
+    </textarea>
+
+    <button class="col center">Uložit</button>
+    
+  </form>
+
+</body>
+
+
+<!-- Micka Jakub -->
+{% endblock content %}
