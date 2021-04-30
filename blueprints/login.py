@@ -25,7 +25,7 @@ def login_page():
 
         if password == user.getUser(name).getPassword():
           session["name"] = name
-          return "dobra prace"
+          return redirect("/profile")
         else:
           error = "Špatné jméno nebo heslo!"
       except:
