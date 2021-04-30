@@ -7,7 +7,7 @@
 
     <form method="POST" class="row mobile-row row-center">
 
-        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    	<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
         <input type="text" class="form-text col-2 m-col-2 search" name="search-term">
         <input type="image" src="{{url_for('static', filename='lupa.svg')}}" alt="Lupa" class="search-button">
 

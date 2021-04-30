@@ -3,13 +3,11 @@
 {% block content %}
 <body>
   <div class="row row-space">
-    <form method="POST">
-      <input type="text" id="search" name="searchbar" class="form-text col-1 m-col-3 search ">
-
-      
-    </form>
+	  {% if name != null%}
     <img src="{{profilepicture}}" alt="Profilovka" class="rounded-image">
     {{name}}
+	{% else %}
+	<a href="/login">Přihlásit se</a>
     </div>
     
 <div class="card col-3 text-left" style="margin-top: 2%;">

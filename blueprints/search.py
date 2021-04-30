@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, redirect, session, render_template
+from flask import *
 from april import materials, user
 search = Blueprint("searchbp", __name__) 
 
@@ -6,7 +6,8 @@ search = Blueprint("searchbp", __name__)
 def searchPage(term):
   searched = materials.getBySearch(term.replace("+", " "))
   if len(searched) == 0:
-    return "Bohuzel toto jsem nenasel"
+     
+    return "Toto jsem nenasel"
   else:
     try:
       name = session["name"]

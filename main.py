@@ -94,13 +94,18 @@ def art():
 def upravit():
     return render_template("upravit-vlozit.html", action_name = 'Upravit', title="Lorem ipsum", content="Dolor sit amet ")
 
-@app.route("/novy", methods=["POST", "GET"])
-def vlozit():
-    return render_template("upravit-vlozit.html", action_name = 'Nový', title="Lorem ipsum", content="Dolor sit amet ")
+@app.route("/pridat", methods=["POST", "GET"])
+def pridat():
+    return render_template("upravit-vlozit.html", action_name = 'Přidat', title="", content="")
+
 
 @app.route("/forgotten-password")
 def forgottenpassword():
-  return render_template("forgotten-password.html")
+  return render_template("auth/forgotten-password.html")
+
+@app.route("/profile")
+def profile_view():
+  return render_template("profile/profile.html", profilepicture=None)
 
 #@app.route("/materials")
 #def materials():
@@ -108,7 +113,7 @@ def forgottenpassword():
 
 @app.route("/materials")
 def materials():
-  return render_template("search_page.html")
+  return render_template("materials/searched_materials.html", profilepicture=None)
 
 @app.route("/game")
 def game():

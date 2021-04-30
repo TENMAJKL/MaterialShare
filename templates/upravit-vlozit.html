@@ -4,8 +4,8 @@
 
 
 <body class="bg-img" onload="check_cookies()">
+	<h1 style="margin-left: 2%">{{ action_name }} materiál</h1>
 	<form method="POST">
-    <h1 style="margin-left: 2%">{{ action_name }} material <br></h>
 
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <input style="margin-left: 2%" type="text" class="form-text" value="{{ title }}">

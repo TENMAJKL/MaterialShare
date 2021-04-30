@@ -6,11 +6,15 @@
   <div class="card row col-3 center" style="margin-top: 2%;">
 
   <div class="column">
+	  {% if profilepicture != None %}
   <img src="{{profilepicture}}" alt="profilový obrázek" width="15%" class="center rounded-image">
+  {% else %}
+	<img src="https://cdn.discordapp.com/attachments/720626679906566175/811221989120933938/unknow.png" alt="profilový obrázek" width="15%" class="center rounded-image">
+	{% endif %}
   <form method="POST" class="column">
     <div class="row row-center">
       <input placeholder="Jméno" type="text" id="name" name="name" class="form-text col-1 mobile-row mobile-row-center" value="{{name}}">
-      <input placeholder="Tůj mail (jan.novak@email.cz)" type="email" id="mail" name="mail" class="form-text col-1 mobile-row mobile-row-cente" value="{{email}}">
+      <input placeholder="Tůj mail" type="email" id="mail" name="mail" class="form-text col-1 mobile-row mobile-row-cente" value="{{email}}">
     </div>
     <div class="row">
       <textarea placeholder="Řekni nám o sobě něco..." id="description"  name="description" class="col-1 center mobile-row textbox" style="margin-top: 2%;" rows="10" cols="30">{{description}}</textarea>
